@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Chee Farm"><meta name="theme-color" content="#1f8a4c"><title>Chee Agriculture Farm</title>
+<style>
+:root{--bg:#f4f8f5;--card:#fff;--tx:#14261b;--mut:#66786c;--bd:#e0e9e3;--g:#1f8a4c;--gs:#e4f4ea;--r:#c0392b;--rs:#fdeceb;--o:#b9770e;--os:#fcf3dc;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#101a14;--card:#18251d;--tx:#e6f1ea;--mut:#92a89a;--bd:#27382d;--g:#4cc27c;--gs:#1d3626;--r:#ff7b6b;--rs:#3a1f1c;--o:#e8b04a;--os:#3a301a}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#101a14;--card:#18251d;--tx:#e6f1ea;--mut:#92a89a;--bd:#27382d;--g:#4cc27c;--gs:#1d3626;--r:#ff7b6b;--rs:#3a1f1c;--o:#e8b04a;--os:#3a301a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;min-height:100vh}
+aside{width:220px;background:var(--card);border-right:1px solid var(--bd);padding:18px 12px;flex:none}
+.logo{font-weight:700;font-size:18px;color:var(--g);padding:4px 10px 16px}
+nav button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--mut);padding:10px 12px;border-radius:8px;font:inherit;cursor:pointer;margin-bottom:2px}
+nav button:hover{background:var(--gs)}nav button.on{background:var(--g);color:#fff}
+main{flex:1;padding:24px;min-width:0;max-width:1200px}
+h1{margin:0 0 4px;font-size:22px}h3{margin:0 0 12px;font-size:16px}.sub,.mut{color:var(--mut)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:14px}
+.g2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;min-width:0}
+.k{color:var(--mut);font-size:13px}.v{font-size:22px;font-weight:700;margin-top:4px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}
+th{text-align:left;color:var(--mut);font-weight:500;font-size:12px;padding:8px;border-bottom:1px solid var(--bd);white-space:nowrap}
+td{padding:9px 8px;border-bottom:1px solid var(--bd);white-space:nowrap}
+.btn,.sm,.ghost{font:inherit;border-radius:8px;cursor:pointer;border:1px solid var(--g);background:var(--g);color:#fff;padding:8px 14px}
+.ghost{background:none;color:var(--g)}.sm{padding:3px 9px;font-size:12px;background:none;color:var(--g);margin-right:4px}.sm.d{color:var(--r);border-color:var(--r)}
+.b{padding:2px 9px;border-radius:99px;font-size:12px;background:var(--gs);color:var(--g)}.b.r{background:var(--rs);color:var(--r)}.b.o{background:var(--os);color:var(--o)}
+dialog{border:1px solid var(--bd);border-radius:14px;background:var(--card);color:var(--tx);width:min(420px,92vw);padding:20px}
+dialog::backdrop{background:rgba(0,0,0,.45)}label{display:block;font-size:13px;color:var(--mut);margin-bottom:10px}
+input,select{display:block;width:100%;margin-top:3px;padding:8px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+.row{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}.err{color:var(--r);font-size:13px;margin-bottom:6px}
+.note{background:var(--os);color:var(--o);padding:8px 12px;border-radius:8px;font-size:13px;margin-bottom:14px}
+.flt{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin-bottom:14px}.flt label{margin:0}
+svg text{fill:var(--mut);font-size:9px}
+html{-webkit-text-size-adjust:100%}body{min-height:100dvh;padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px);-webkit-tap-highlight-color:transparent}.tw{-webkit-overflow-scrolling:touch}input,select{font-size:16px;min-height:44px;-webkit-appearance:none;appearance:none;border-radius:8px}select{background-image:linear-gradient(45deg,transparent 50%,var(--mut) 50%),linear-gradient(135deg,var(--mut) 50%,transparent 50%);background-position:calc(100% - 16px) 55%,calc(100% - 11px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:28px}input[type=date]{min-width:0}dialog{max-height:90dvh;overflow:auto}#gate{display:none;align-items:center;justify-content:center;padding:20px;min-height:100dvh;flex:1}.login{width:min(380px,100%);padding:26px}.login .logo{padding:0 0 12px;text-align:center}.login .btn{margin-top:6px}.btn,.ghost{min-height:44px}.sm{min-height:34px;padding:6px 12px}@media(max-width:800px){body{display:block}aside{width:auto;border:0;border-bottom:1px solid var(--bd);padding:10px}.logo{padding-bottom:6px}nav{display:flex;overflow-x:auto;gap:4px}nav button{width:auto;white-space:nowrap;margin:0}main{padding:16px}nav button{min-height:40px}}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script></head><body>
+<aside><div class="logo" id="lg"></div><nav id="nav"></nav><div id="who" style="margin-top:16px;padding:12px 10px;border-top:1px solid var(--bd)"></div></aside>
+<div id="gate"></div><main id="main"></main><dialog id="dlg"></dialog>
+<script>
+const K='vegemgr1',VIEWS=['Dashboard','Inventory','Suppliers','Shipments','Sales','Reports','Settings'],UNITS=['kg','crates','bundles','boxes'];
+const $=s=>document.querySelector(s),uid=()=>Math.random().toString(36).slice(2,9);
+const ago=n=>{const d=new Date();d.setDate(d.getDate()-n);return d.toISOString().slice(0,10)};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function seed(){const sa=[['v2',150,.8,50],['v4',100,1.1,35],['v5',10,18,20],['v2',100,.8,12]];
+return{demo:1,seq:{S:9,H:5},set:{biz:'Chee Agriculture Farm',cur:'RM',low:20},
+sp:[{id:'s1',name:'Green Valley Farms',contact:'012-555 0101'},{id:'s2',name:'Cameron Fresh Produce',contact:'013-555 0142'},{id:'s3',name:'Perak Agro Supply',contact:''}],
+veg:[['Tomatoes','Own Farm','',400,'kg',1.2,2.5,60],['Cabbage','External Supplier','s1',200,'kg',.8,1.6,55],['Spinach','Own Farm','',120,'bundles',.5,1.2,40],['Carrots','External Supplier','s2',150,'kg',1.1,2.2,45],['Chillies','External Supplier','s3',30,'crates',18,32,30],['Cucumbers','Own Farm','',90,'kg',.7,1.5,20]].map((a,i)=>({id:'v'+(i+1),name:a[0],src:a[1],sup:a[2],qty:a[3],unit:a[4],cost:a[5],price:a[6],date:ago(a[7])})),
+su:sa.map((a,i)=>({id:'u'+i,sid:{v2:'s1',v4:'s2',v5:'s3'}[a[0]],vid:a[0],qty:a[1],price:a[2],date:ago(a[3])})),
+sl:[['v1',120,2.5,'Fresh Mart','Paid',75],['v2',90,1.6,'KL Wholesale','Paid',62],['v4',70,2.2,'Ipoh Grocers','Paid',48],['v1',80,2.6,'Fresh Mart','Paid',33],['v5',8,32,'Spice House','Pending',20],['v3',60,1.2,'Ipoh Grocers','Paid',14],['v6',40,1.5,'KL Wholesale','Paid',8],['v5',6,33,'Spice House','Paid',3]].map((a,i)=>({id:'a'+i,ref:'S-'+String(i+1).padStart(4,'0'),vid:a[0],qty:a[1],price:a[2],cust:a[3],st:a[4],date:ago(a[5])})),
+sh:[['v1',50,'Fresh Mart','Delivered',70,''],['v2',60,'KL Wholesale','Delivered',40,''],['v3',20,'Ipoh Grocers','In transit',2,''],['v4',30,'Ipoh Grocers','Pending',1,'']].map((a,i)=>({id:'h'+i,ref:'H-'+String(i+1).padStart(4,'0'),vid:a[0],qty:a[1],cust:a[2],st:a[3],date:ago(a[4]),sale:a[5]})),
+ex:[['Farming',420,'Seeds and fertiliser',65],['Transport',180,'Lorry hire',40],['Other',95,'Packaging',25],['Transport',160,'Fuel',10]].map((a,i)=>({id:'x'+i,cat:a[0],amt:a[1],note:a[2],date:ago(a[3])}))}}
+function empty(){return{seq:{S:0,H:0},set:{biz:'Chee Agriculture Farm',cur:'RM',low:20},sp:[],veg:[],su:[],sl:[],sh:[],ex:[]}}let D=empty();let Q=Promise.resolve();const save=()=>{Q=Q.then(push)};
+let view='Dashboard',R={f:'',t:''},VF='';
+const m=n=>D.set.cur+' '+(+n||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}),q=n=>(+n||0).toLocaleString(undefined,{maximumFractionDigits:2});
+const V=id=>D.veg.find(v=>v.id==id)||{name:'(deleted)',unit:'',price:0},S=id=>(D.sp.find(s=>s.id==id)||{}).name||'—';
+const sum=(a,f)=>a.reduce((t,x)=>t+f(x),0);
+const stock=v=>v.qty+sum(D.su.filter(x=>x.vid==v.id),x=>x.qty)-sum(D.sl.filter(x=>x.vid==v.id),x=>x.qty)-sum(D.sh.filter(x=>x.vid==v.id&&!x.sale),x=>x.qty);
+const inR=d=>(!R.f||d>=R.f)&&(!R.t||d<=R.t);
+const rev=a=>sum(a.filter(s=>s.st=='Paid'),s=>s.qty*s.price);
+const exps=()=>D.su.map(s=>({cat:'Purchasing',amt:s.qty*s.price,date:s.date})).concat(D.ex);
+const bad=(t,c)=>`<span class="b ${c||''}">${esc(t)}</span>`;
+const tbl=(h,r)=>`<div class="tw"><table><thead><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${r.length?r.map(c=>`<tr>${c.map(x=>`<td>${x}</td>`).join('')}</tr>`).join(''):`<tr><td colspan="${h.length}" class="mut">No records yet</td></tr>`}</tbody></table></div>`;
+const ab=(a,i,l,c)=>`<button class="sm ${c||''}" data-a="${a}" data-i="${i}">${l}</button>`;
+const head=(t,s,btn)=>`<div class="top"><div><h1>${t}</h1><div class="sub">${s}</div></div>${btn||''}</div>`;
+const add=(a,l)=>`<button class="btn" data-a="${a}">+ ${l}</button>`;
+const months=n=>{const o=[];for(let i=n-1;i>=0;i--){const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-i);o.push(d.toISOString().slice(0,7))}return o};
+function bars(data){const vs=data.map(d=>d.v),mx=Math.max(0,...vs),mn=Math.min(0,...vs),rg=(mx-mn)||1,H=110,y=v=>6+(mx-v)/rg*H,w=360/data.length;
+return`<svg viewBox="0 0 360 140" width="100%" role="img">${data.map((d,i)=>{const x=i*w+w*.2,a=y(Math.max(d.v,0)),b=y(Math.min(d.v,0));return`<rect x="${x}" y="${a}" width="${w*.6}" height="${Math.max(b-a,1)}" rx="3" fill="${d.v<0?'var(--r)':'var(--g)'}"/><text x="${x+w*.3}" y="134" text-anchor="middle">${d.l}</text><text x="${x+w*.3}" y="${a-3}" text-anchor="middle">${Math.round(d.v)}</text>`}).join('')}<line x1="0" x2="360" y1="${y(0)}" y2="${y(0)}" stroke="var(--bd)"/></svg>`}
+function trend(){const e=exps();return months(6).map(k=>{const r=rev(D.sl.filter(s=>s.date.startsWith(k))),x=sum(e.filter(s=>s.date.startsWith(k)),s=>s.amt);return{l:k.slice(5)+'/'+k.slice(2,4),r,x,v:r-x}})}
+const views={
+Dashboard(){const r=rev(D.sl),x=sum(exps(),e=>e.amt),low=D.veg.filter(v=>stock(v)<=D.set.low),t=trend();
+const card=(k,v)=>`<div class="card"><div class="k">${k}</div><div class="v">${v}</div></div>`;
+return head('Dashboard',esc(D.set.biz)+' · all figures calculated from recorded data')+(D.demo?'<div class="note">Showing demonstration data. Clear it in Settings to start with your own records.</div>':'')+
+`<div class="grid">${card('Vegetables in stock',q(sum(D.veg,stock))+' <span class="k">units</span>')}${card('Quantity shipped',q(sum(D.sh,s=>s.qty))+' <span class="k">units</span>')}${card('Total revenue',m(r))}${card('Total profit',m(r-x))}${card('Sales transactions',D.sl.length)}${card('Total expenses',m(x))}</div>
+<div class="g2"><div class="card"><h3>Revenue overview</h3>${bars(t.map(a=>({l:a.l,v:a.r})))}</div><div class="card"><h3>Profit overview</h3>${bars(t)}</div></div>
+<div class="g2"><div class="card"><h3>Recent sales</h3>${tbl(['Ref','Item','Total','Date'],[...D.sl].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5).map(s=>[s.ref,esc(V(s.vid).name),m(s.qty*s.price),s.date]))}</div>
+<div class="card"><h3>Recent shipments</h3>${tbl(['Ref','Item','Qty','Status'],[...D.sh].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5).map(s=>[s.ref,esc(V(s.vid).name),q(s.qty)+' '+V(s.vid).unit,stb(s.st)]))}</div></div>
+<div class="g2"><div class="card"><h3>Low-stock notifications</h3>${low.length?tbl(['Vegetable','Left'],low.map(v=>[esc(v.name),bad(q(stock(v))+' '+v.unit,stock(v)<=0?'r':'o')])):'<span class="mut">All items are above the low-stock level.</span>'}</div>
+<div class="card"><h3>Supplier supply overview</h3>${tbl(['Supplier','Supplied','Spend'],D.sp.map(s=>{const u=D.su.filter(x=>x.sid==s.id);return[esc(s.name),u.length+' deliveries',m(sum(u,x=>x.qty*x.price))]}))}</div></div>`},
+Inventory(){const l=D.veg.filter(v=>!VF||v.src==VF);return head('Inventory','Stock = opening quantity + supplies − sales − shipments',add('nv','Add vegetable'))+
+`<div class="flt"><label>Source<select id="vf"><option value="">All</option><option${VF=='Own Farm'?' selected':''}>Own Farm</option><option${VF=='External Supplier'?' selected':''}>External Supplier</option></select></label></div><div class="card">`+
+tbl(['Vegetable','Source','Supplier','Received','Out','In stock','Cost/unit','Price/unit','Date',''],l.map(v=>{const rc=v.qty+sum(D.su.filter(x=>x.vid==v.id),x=>x.qty),st=stock(v);return[esc(v.name),bad(v.src,v.src=='Own Farm'?'':'o'),S(v.sup),q(rc)+' '+v.unit,q(rc-st),bad(q(st)+' '+v.unit,st<=0?'r':st<=D.set.low?'o':''),m(v.cost),m(v.price),v.date,(me.role=='owner'?ab('ev',v.id,'Edit'):'')+ab('dv',v.id,'Delete','d')]}))+'</div>'},
+Suppliers(){return head('Suppliers','Supplier records and supply history. Each supply adds stock and a purchasing expense.',`<div>${add('ns','Add supplier')} ${add('nu','Record supply')}</div>`)+
+`<div class="card" style="margin-bottom:14px"><h3>Suppliers</h3>`+tbl(['Name','Contact','Deliveries','Qty supplied','Total cost',''],D.sp.map(s=>{const u=D.su.filter(x=>x.sid==s.id);return[esc(s.name),esc(s.contact||'—'),u.length,q(sum(u,x=>x.qty)),m(sum(u,x=>x.qty*x.price)),ab('es',s.id,'Edit')+ab('ds',s.id,'Delete','d')]}))+`</div><div class="card"><h3>Supply history</h3>`+
+tbl(['Date','Supplier','Vegetable','Quantity','Price/unit','Total',''],[...D.su].sort((a,b)=>b.date.localeCompare(a.date)).map(u=>[u.date,esc(S(u.sid)),esc(V(u.vid).name),q(u.qty)+' '+V(u.vid).unit,m(u.price),m(u.qty*u.price),ab('du',u.id,'Delete','d')]))+'</div>'},
+Shipments(){return head('Shipments','Shipments linked to a sale do not deduct stock again',add('nh','Record shipment'))+'<div class="card">'+
+tbl(['Reference','Vegetable','Quantity','Customer','Date','Status',''],[...D.sh].sort((a,b)=>b.date.localeCompare(a.date)).map(s=>[s.ref,esc(V(s.vid).name),q(s.qty)+' '+V(s.vid).unit,esc(s.cust||'—'),s.date,`<select data-st="${s.id}" style="width:auto;margin:0;padding:3px 26px 3px 8px;min-height:36px">${['Pending','In transit','Delivered'].map(o=>`<option${o==s.st?' selected':''}>${o}</option>`).join('')}</select>`,ab('dh',s.id,'Delete','d')]))+'</div>'},
+Sales(){return head('Sales','Wholesale transactions. Only Paid sales count as revenue.',add('na','Record sale'))+`<div class="grid"><div class="card"><div class="k">Total sales value</div><div class="v">${m(sum(D.sl,s=>s.qty*s.price))}</div></div><div class="card"><div class="k">Paid</div><div class="v">${m(rev(D.sl))}</div></div><div class="card"><div class="k">Pending</div><div class="v">${m(sum(D.sl.filter(s=>s.st!='Paid'),s=>s.qty*s.price))}</div></div></div><div class="card">`+
+tbl(['Reference','Vegetable','Qty','Price/unit','Total','Customer','Date','Payment',''],[...D.sl].sort((a,b)=>b.date.localeCompare(a.date)).map(s=>[s.ref,esc(V(s.vid).name),q(s.qty)+' '+V(s.vid).unit,m(s.price),m(s.qty*s.price),esc(s.cust||'—'),s.date,bad(s.st,s.st=='Paid'?'':'o'),ab('da',s.id,'Delete','d')]))+'</div>'},
+Reports(){const sl=D.sl.filter(s=>inR(s.date)),ex=exps().filter(e=>inR(e.date)),r=rev(sl),x=sum(ex,e=>e.amt),cats=['Purchasing','Farming','Transport','Other'],t=trend(),bv={};
+sl.filter(s=>s.st=='Paid').forEach(s=>bv[s.vid]=(bv[s.vid]||0)+s.qty*s.price);
+return head('Financial reports','Revenue (paid sales) − expenses = estimated profit',add('nx','Add expense'))+`<div class="flt"><label>From<input type="date" id="rf" value="${R.f}"></label><label>To<input type="date" id="rt" value="${R.t}"></label></div>
+<div class="grid"><div class="card"><div class="k">Revenue</div><div class="v">${m(r)}</div></div><div class="card"><div class="k">Expenses</div><div class="v">${m(x)}</div></div><div class="card"><div class="k">Estimated profit</div><div class="v" style="color:${r-x<0?'var(--r)':'var(--g)'}">${m(r-x)}</div></div></div>
+<div class="g2"><div class="card"><h3>Profit trend (last 6 months)</h3>${bars(t)}</div><div class="card"><h3>Expenses by category</h3>${tbl(['Category','Amount'],cats.map(c=>[c,m(sum(ex.filter(e=>e.cat==c),e=>e.amt))]))}<div class="mut" style="font-size:12px;margin-top:8px">Purchasing comes from supplier supply records, so it is never entered twice.</div></div></div>
+<div class="g2"><div class="card"><h3>Revenue by vegetable</h3>${tbl(['Vegetable','Revenue'],Object.keys(bv).map(k=>[esc(V(k).name),m(bv[k])]))}</div>
+<div class="card"><h3>Recorded expenses</h3>${tbl(['Date','Category','Note','Amount',''],D.ex.filter(e=>inR(e.date)).sort((a,b)=>b.date.localeCompare(a.date)).map(e=>[e.date,e.cat,esc(e.note),m(e.amt),ab('dx',e.id,'Delete','d')]))}</div></div>`},
+Settings(){const s=D.set;return head('Settings','Business preferences and data')+`<div class="card" style="max-width:480px"><label>Business name<input id="s1" value="${esc(s.biz)}"></label><label>Currency label<input id="s2" value="${esc(s.cur)}"></label><label>Low-stock level (units)<input id="s3" type="number" min="0" value="${s.low}"></label><button class="btn" data-a="ss">Save settings</button>
+<hr style="border:0;border-top:1px solid var(--bd);margin:18px 0"><p class="mut">Data is stored in your Supabase project and shared by every signed-in device.</p><button class="ghost" data-a="rs">Reload demo data</button> <button class="ghost" style="color:var(--r);border-color:var(--r)" data-a="cl">Clear all data</button></div><div class="card" style="max-width:480px;margin-top:14px"><div class="top" style="margin:0 0 6px"><h3 style="margin:0">Workers</h3>${add('nw','Add worker')}</div><p class="mut" style="font-size:13px;margin-top:0">Workers can only add or delete vegetables in Inventory.</p>${tbl(['Name','Email',''],W.map(w=>[esc(w.name),esc(w.email),ab('rw',w.id,'Reset password')+ab('dw',w.id,'Remove','d')]))}</div>`}};
+const stb=s=>bad(s,s=='Delivered'?'':s=='Pending'?'o':'');
+function modal(title,fields,vals,fn){const d=$('#dlg');d.innerHTML=`<form id="f"><h3>${title}</h3>${fields.map(f=>`<label>${f.l}${f.o?`<select name="${f.n}">${f.o.map(o=>{const[a,b]=Array.isArray(o)?o:[o,o];return`<option value="${esc(a)}"${vals[f.n]==a?' selected':''}>${esc(b)}</option>`}).join('')}</select>`:`<input name="${f.n}" type="${f.t||'text'}" value="${esc(vals[f.n]??'')}"${f.t=='number'?' step="any" min="0"':''}${f.r?' required':''}>`}</label>`).join('')}<div class="err" id="er"></div><div class="row"><button type="button" class="ghost" id="cx">Cancel</button><button class="btn">Save</button></div></form>`;
+$('#cx').onclick=()=>d.close();$('#f').onsubmit=async e=>{e.preventDefault();const o=Object.fromEntries(new FormData(e.target));fields.forEach(f=>{if(f.t=='number')o[f.n]=+o[f.n];else if(typeof o[f.n]=='string')o[f.n]=o[f.n].trim()});const er=await fn(o);if(er){$('#er').textContent=er;return}save();d.close();draw()};d.showModal()}
+const vo=()=>D.veg.map(v=>[v.id,`${v.name} (${q(stock(v))} ${v.unit} left)`]),so=(z)=>[...(z?[['','— None —']]:[]),...D.sp.map(s=>[s.id,s.name])];
+const need=(o,ks)=>ks.find(k=>o[k]===''||(typeof o[k]=='number'&&isNaN(o[k])));
+const H={
+nv:()=>vegForm({src:'Own Farm',unit:'kg',date:ago(0)}),ev:i=>vegForm(D.veg.find(v=>v.id==i)),
+dv:i=>{if(D.su.concat(D.sl,D.sh).some(x=>x.vid==i))return alert('This vegetable has supplies, sales or shipments recorded, so it can’t be deleted.');if(confirm('Delete this vegetable?')){D.veg=D.veg.filter(v=>v.id!=i);save();draw()}},
+ns:()=>supForm({}),es:i=>supForm(D.sp.find(s=>s.id==i)),
+ds:i=>{if(D.su.some(x=>x.sid==i))return alert('This supplier has supply history and can’t be deleted.');if(confirm('Delete supplier?')){D.sp=D.sp.filter(s=>s.id!=i);D.veg.forEach(v=>{if(v.sup==i)v.sup=''});save();draw()}},
+nu:()=>{if(!D.sp.length||!D.veg.length)return alert('Add a supplier and a vegetable first.');modal('Record supply',[{l:'Supplier',n:'sid',o:so()},{l:'Vegetable',n:'vid',o:vo()},{l:'Quantity',n:'qty',t:'number',r:1},{l:'Purchase price per unit',n:'price',t:'number',r:1},{l:'Supply date',n:'date',t:'date',r:1}],{date:ago(0)},o=>{if(need(o,['qty','price','date'])||o.qty<=0)return'Enter a quantity above 0, a price and a date.';D.su.push({id:uid(),...o})})},
+du:i=>{if(confirm('Delete this supply record? Stock will reduce accordingly.')){D.su=D.su.filter(x=>x.id!=i);save();draw()}},
+na:()=>{if(!D.veg.length)return alert('Add a vegetable first.');modal('Record sale',[{l:'Vegetable',n:'vid',o:vo()},{l:'Quantity sold',n:'qty',t:'number',r:1},{l:'Selling price per unit (leave 0 to use the standard price)',n:'price',t:'number'},{l:'Customer (optional)',n:'cust'},{l:'Payment status',n:'st',o:['Paid','Pending']},{l:'Date',n:'date',t:'date',r:1}],{date:ago(0),price:0},o=>{const v=V(o.vid);if(!(o.qty>0)||!o.date)return'Enter a quantity above 0 and a date.';if(o.qty>stock(v))return`Only ${q(stock(v))} ${v.unit} in stock.`;if(!(o.price>0))o.price=v.price;D.sl.push({id:uid(),ref:'S-'+String(++D.seq.S).padStart(4,'0'),...o})})},
+da:i=>{if(confirm('Delete this sale? Stock will be returned.')){D.sl=D.sl.filter(x=>x.id!=i);save();draw()}},
+nh:()=>{if(!D.veg.length)return alert('Add a vegetable first.');modal('Record shipment',[{l:'Linked sale (optional, avoids deducting stock twice)',n:'sale',o:[['','— None —'],...D.sl.map(s=>[s.id,`${s.ref} · ${V(s.vid).name} · ${q(s.qty)}`])]},{l:'Vegetable (ignored when a sale is linked)',n:'vid',o:vo()},{l:'Quantity shipped',n:'qty',t:'number'},{l:'Customer (optional)',n:'cust'},{l:'Shipment date',n:'date',t:'date',r:1},{l:'Delivery status',n:'st',o:['Pending','In transit','Delivered']}],{date:ago(0)},o=>{if(o.sale){const s=D.sl.find(x=>x.id==o.sale);o.vid=s.vid;o.qty=s.qty;o.cust=o.cust||s.cust}else{const v=V(o.vid);if(!(o.qty>0))return'Enter a quantity above 0.';if(o.qty>stock(v))return`Only ${q(stock(v))} ${v.unit} available to ship.`}D.sh.push({id:uid(),ref:'H-'+String(++D.seq.H).padStart(4,'0'),...o})})},
+dh:i=>{if(confirm('Delete this shipment?')){D.sh=D.sh.filter(x=>x.id!=i);save();draw()}},
+nx:()=>modal('Add expense',[{l:'Category',n:'cat',o:['Farming','Transport','Other']},{l:'Amount',n:'amt',t:'number',r:1},{l:'Note',n:'note'},{l:'Date',n:'date',t:'date',r:1}],{date:ago(0)},o=>{if(!(o.amt>0)||!o.date)return'Enter an amount above 0 and a date.';D.ex.push({id:uid(),...o})}),
+dx:i=>{if(confirm('Delete this expense?')){D.ex=D.ex.filter(x=>x.id!=i);save();draw()}},
+ss:()=>{D.set={biz:$('#s1').value.trim()||'Chee Agriculture Farm',cur:$('#s2').value.trim()||'RM',low:Math.max(0,+$('#s3').value||0)};save();draw()},
+nw:()=>modal('Add worker',[{l:'Worker name',n:'name',r:1},{l:'Worker email',n:'user',t:'email',r:1},{l:'Password (min 6 characters)',n:'pw',t:'password',r:1}],{},async o=>{o.user=o.user.toLowerCase();if(!o.name||!o.user||o.pw.length<6)return'Enter a name, an email and a password of at least 6 characters.';const c=supabase.createClient(SB.url,SB.key,{auth:{persistSession:false,autoRefreshToken:false}});const{data,error}=await c.auth.signUp({email:o.user,password:o.pw,options:{data:{name:o.name}}});if(error)return error.message;if(!data.user)return'Could not create the account.';const r=await sb.from('profiles').update({role:'worker'}).eq('id',data.user.id);if(r.error)return r.error.message;await loadW()}),
+rw:async i=>{const w=W.find(x=>x.id==i),{error}=await sb.auth.resetPasswordForEmail(w.email);alert(error?error.message:'A password reset email was sent to '+w.email)},
+dw:async i=>{if(confirm('Remove this worker? They will lose access.')){const{error}=await sb.from('profiles').delete().eq('id',i);if(error)alert(error.message);await loadW();draw()}},
+lo:async()=>{await sb.auth.signOut();me=null;D=empty();snap=null;gate()},
+rs:()=>{if(confirm('Replace all data with demo data?')){D=seed();save();draw()}},
+cl:()=>{if(confirm('Delete ALL records on this browser?')){D={seq:{S:0,H:0},set:D.set,sp:[],veg:[],su:[],sl:[],sh:[],ex:[]};save();draw()}}};
+function vegForm(v){const ed=!!v.id;modal(ed?'Edit vegetable':'Add vegetable',[{l:'Vegetable name',n:'name',r:1},{l:'Source',n:'src',o:['Own Farm','External Supplier']},{l:'Supplier (if external)',n:'sup',o:so(1)},{l:'Opening quantity',n:'qty',t:'number',r:1},{l:'Unit',n:'unit',o:UNITS},{l:'Cost per unit',n:'cost',t:'number',r:1},{l:'Selling price per unit',n:'price',t:'number',r:1},{l:'Date recorded',n:'date',t:'date',r:1}],v,o=>{if(!o.name||need(o,['qty','cost','price','date']))return'Please fill in every required field.';if(o.src=='External Supplier'&&!o.sup)return'Choose a supplier for external vegetables.';if(o.src=='Own Farm')o.sup='';ed?Object.assign(v,o):D.veg.push({id:uid(),...o})})}
+function supForm(s){const ed=!!s.id;modal(ed?'Edit supplier':'Add supplier',[{l:'Supplier name',n:'name',r:1},{l:'Contact (optional)',n:'contact'}],s,o=>{if(!o.name)return'Name is required.';ed?Object.assign(s,o):D.sp.push({id:uid(),...o})})}
+function draw(){if(!me)return;if(me.role!='owner')view='Inventory';$('#lg').textContent='🥬 '+D.set.biz;$('#who').innerHTML=`<div class="k" style="margin-bottom:8px">${esc(me.name)} · ${me.role}</div><button class="ghost sm" data-a="lo">Sign out</button>`;$('#nav').innerHTML=(me.role=='owner'?VIEWS:['Inventory']).map(n=>`<button class="${n==view?'on':''}" data-n="${n}">${n}</button>`).join('');$('#main').innerHTML=views[view]();}
+document.addEventListener('click',e=>{const n=e.target.closest('[data-n]');if(n){if(me&&(me.role=='owner'||n.dataset.n=='Inventory'))view=n.dataset.n;draw();return}const a=e.target.closest('[data-a]');if(a&&can(a.dataset.a))H[a.dataset.a](a.dataset.i)});
+document.addEventListener('change',e=>{const t=e.target;if(t.dataset.st){D.sh.find(s=>s.id==t.dataset.st).st=t.value;save();draw()}else if(t.id=='vf'){VF=t.value;draw()}else if(t.id=='rf'||t.id=='rt'){R[t.id=='rf'?'f':'t']=t.value;draw()}});
+const SB=(()=>{try{return JSON.parse(localStorage.getItem('vegesb'))}catch(e){}})()||{url:'',key:''};
+const can=x=>me&&(me.role=='owner'||['nv','dv','lo'].includes(x));
+let me,W=[],sb,mode='in',msg='',snap=null;
+const T={sp:'suppliers',veg:'vegetables',su:'supplies',sl:'sales',sh:'shipments',ex:'expenses'};
+const cl=r=>Object.fromEntries(Object.entries(r).map(([k,v])=>[k,v===''?null:v]));
+const fx=r=>Object.fromEntries(Object.entries(r).map(([k,v])=>[k,v===null?'':v]));
+const snapOf=()=>{const o={set:JSON.stringify([D.set,D.seq])};for(const k in T){o[k]={};D[k].forEach(r=>o[k][r.id]=JSON.stringify(r))}return o};
+async function pull(){for(const k in T){const{data,error}=await sb.from(T[k]).select('*');if(error)throw error;D[k]=data.map(fx)}
+const{data}=await sb.from('app_settings').select('*').eq('id',1).maybeSingle();if(data){D.set={biz:data.biz,cur:data.cur,low:+data.low};D.seq={S:data.seq_s,H:data.seq_h}}snap=snapOf()}
+async function push(){if(!snap)return;try{const o=snap,c=snapOf();
+for(const k in T){const up=D[k].filter(r=>o[k][r.id]!==c[k][r.id]).map(cl);if(up.length){const{error}=await sb.from(T[k]).upsert(up);if(error)throw error}}
+for(const k of Object.keys(T).reverse()){const del=Object.keys(o[k]).filter(i=>!(i in c[k]));if(del.length){const{error}=await sb.from(T[k]).delete().in('id',del);if(error)throw error}}
+if(o.set!==c.set&&me.role=='owner'){const{error}=await sb.from('app_settings').upsert({id:1,biz:D.set.biz,cur:D.set.cur,low:D.set.low,seq_s:D.seq.S,seq_h:D.seq.H});if(error)throw error}
+snap=c}catch(e){alert('Could not save: '+e.message);try{await pull()}catch(x){}draw()}}
+async function loadW(){W=[];if(me.role=='owner'){const{data}=await sb.from('profiles').select('*').eq('role','worker');W=data||[]}}
+async function enter(ses){me=null;if(ses){const{data:p}=await sb.from('profiles').select('*').eq('id',ses.user.id).maybeSingle();
+if(p&&(p.role=='owner'||p.role=='worker')){me={role:p.role,name:p.name||p.email,user:p.email,id:p.id};try{await pull();await loadW()}catch(e){alert('Could not load data: '+e.message);me=null}}
+else{await sb.auth.signOut();msg='This account has not been approved, or was removed. Ask the owner.'}}gate()}
+function gate(){const ok=!!me,g=$('#gate'),up=mode=='up';$('aside').style.display=ok?'':'none';$('#main').style.display=ok?'':'none';g.style.display=ok?'none':'flex';if(ok){draw();return}
+g.innerHTML=`<form id='lf' class='card login'><div class='logo'>\ud83e\udd6c ${esc(D.set.biz)}</div><h3>${up?'Create the owner account':'Sign in'}</h3>${up?`<label>Your name<input id='ln' required></label>`:''}<label>Email<input id='lu' type='email' autocomplete='username' autocapitalize='none' required></label><label>Password<input id='lp' type='password' autocomplete='${up?'new-password':'current-password'}' minlength='6' required></label><div class='err' id='le'>${esc(msg)}</div><button class='btn' style='width:100%'>${up?'Create account':'Sign in'}</button><p class='mut' style='font-size:13px;text-align:center'><a href='#' id='t1'>${up?'Back to sign in':'First time? Create owner account'}</a>${up?'':` \u00b7 <a href='#' id='t2'>Forgot password</a>`}</p><p style='text-align:center;font-size:12px'><a href='#' id='t3' class='mut'>Change Supabase connection</a></p></form>`;
+$('#t3').onclick=e=>{e.preventDefault();try{localStorage.removeItem('vegesb')}catch(x){}location.reload()};
+$('#t1').onclick=e=>{e.preventDefault();mode=up?'in':'up';msg='';gate()};
+const t2=$('#t2');if(t2)t2.onclick=async e=>{e.preventDefault();const u=$('#lu').value.trim();if(!u){$('#le').textContent='Enter your email first.';return}const{error}=await sb.auth.resetPasswordForEmail(u);$('#le').textContent=error?error.message:'Password reset email sent.'};
+$('#lf').onsubmit=async e=>{e.preventDefault();const u=$('#lu').value.trim().toLowerCase(),p=$('#lp').value,er=$('#le');er.textContent='';
+const r=up?await sb.auth.signUp({email:u,password:p,options:{data:{name:$('#ln').value.trim()}}}):await sb.auth.signInWithPassword({email:u,password:p});
+if(r.error){er.textContent=r.error.message;return}
+if(up&&!r.data.session){mode='in';msg='Account created. Check your email to confirm it, then sign in.';gate();return}
+msg='';await enter(r.data.session)}}
+async function boot(){if(!SB.url||!SB.key){$('aside').style.display=$('#main').style.display='none';const g=$('#gate');g.style.display='flex';
+g.innerHTML=`<form id='cf' class='card login'><div class='logo'>\ud83e\udd6c Connect Supabase</div><p class='mut' style='font-size:13px'>In Supabase open Project Settings, then API, and copy the project URL and the anon (publishable) key. Never paste a service-role or secret key.</p><label>Project URL<input id='cu' placeholder='https://xxxx.supabase.co' autocapitalize='none' autocorrect='off' required></label><label>Anon / publishable key<input id='ck' placeholder='eyJ... or sb_publishable_...' autocapitalize='none' autocorrect='off' required></label><div class='err' id='ce'></div><button class='btn' style='width:100%'>Connect</button></form>`;
+$('#cf').onsubmit=e=>{e.preventDefault();const u=$('#cu').value.trim().replace(/\/+$/,''),k=$('#ck').value.trim();let role='';try{role=JSON.parse(atob(k.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'))).role}catch(x){}
+if(!/^https:\/\/[\w.-]+$/.test(u)){$('#ce').textContent='Enter the URL like https://yourproject.supabase.co';return}
+if(role=='service_role'||/^sb_secret_/.test(k)){$('#ce').textContent='That is a secret key. Use the anon / publishable key instead.';return}
+try{localStorage.setItem('vegesb',JSON.stringify({url:u,key:k}))}catch(x){}location.reload()};return}
+sb=supabase.createClient(SB.url,SB.key);
+sb.auth.onAuthStateChange(ev=>{if(ev=='PASSWORD_RECOVERY'){const p=prompt('Enter a new password (min 6 characters)');if(p&&p.length>=6)sb.auth.updateUser({password:p}).then(r=>alert(r.error?r.error.message:'Password updated'))}});
+const{data}=await sb.auth.getSession();await enter(data.session)}
+boot();
+</script></body></html>
